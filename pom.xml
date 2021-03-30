@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.openurp</groupId>
+    <artifactId>openurp-java-parent</artifactId>
+    <version>0.4.6</version>
+  </parent>
+  <groupId>org.openurp.wmu</groupId>
+  <artifactId>openurp-edu-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>OpenURP Edu Parent</name>
+
+  <modules>
+    <module>examapp</module>
+  </modules>
+
+  <properties>
+    <downloadSources>true</downloadSources>
+    <downloadJavadocs>false</downloadJavadocs>
+    <openurp.version>0.3.0-SNAPSHOT</openurp.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.openurp.edu.nav</groupId>
+        <artifactId>openurp-edu-nav-default</artifactId>
+        <version>${openurp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openurp.edu.grade</groupId>
+        <artifactId>openurp-edu-grade-course</artifactId>
+        <version>${openurp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openurp.edu.grade</groupId>
+        <artifactId>openurp-edu-grade-report</artifactId>
+        <version>${openurp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openurp.edu.grade</groupId>
+        <artifactId>openurp-edu-grade-teacher</artifactId>
+        <version>${openurp.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
